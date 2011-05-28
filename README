@@ -1,2 +1,31 @@
 Inverse Kinematics Solver
 =========================
+
+This is a 2D IK-solver. Given a limb consisting of any number of bones and a 2D 
+coordinate at any point, the joints will rotate to bring the tip of the limb to rest
+at the point. An elbow constraint can be turned on, restricting joints from rotating 
+more than 180 degrees in one direction. This causes the limb to form more comfortable
+positions.
+
+I have lost the makefile for this project so the code is provided as is. An exe is 
+provided in bin should you wish to run it. The SDL.dll must remain in the same 
+directory as the .exe in order for keyboard input to work.
+
+Controls
+========
+
+Q or Esc         Exit the application.
+E                Toggle 'elbow' constraint.
+R                Reset.
+A                Add bone.
+S                Remove bone.
+Z,X,C,V,B,N,M    Move to preset target positions.
+Arrow Keys       Manually move target.
+
+Libraries and Toolkits
+======================
+
+OpenGL is used for graphics.
+GLUT is used to display them.
+Simple Directmedia Layer (SDL) is used for keyboard input.
+
